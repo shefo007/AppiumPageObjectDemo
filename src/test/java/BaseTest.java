@@ -24,7 +24,7 @@ public class BaseTest {
                 .usingPort(4723)
                 .withAppiumJS(new File("C:\\Users\\Sheri\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
                 .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
-                .withTimeout(Duration.ofSeconds(30))
+                .withTimeout(Duration.ofSeconds(50))
                 .build();
 
         service.start();
