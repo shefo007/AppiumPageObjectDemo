@@ -1,8 +1,11 @@
+package tests;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -12,7 +15,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 
-public class BaseTest {
+public class BaseTest extends AbstractTestNGCucumberTests {
 
     public static AppiumDriver driver;
     private static final String DEFAULT_URL = "http://localhost:4723/";
@@ -33,7 +36,7 @@ public class BaseTest {
 
     @BeforeTest
     public void Android_setUp() throws URISyntaxException, MalformedURLException {
-        startServer();
+//        startServer();
 
         UiAutomator2Options options = new UiAutomator2Options();
 
@@ -53,6 +56,6 @@ public class BaseTest {
         if (null != driver) {
             driver.quit();
         }
-        service.stop();
+//        service.stop();
     }
 }
