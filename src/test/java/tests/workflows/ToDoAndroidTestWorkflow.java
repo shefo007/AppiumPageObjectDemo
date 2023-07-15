@@ -17,7 +17,7 @@ public class ToDoAndroidTestWorkflow extends BaseTestWorkflow {
 
     @DataProvider(name = "tasks data")
     public Object[][] passData() throws IOException, ParseException {
-        return JsonReader.getJSONData(System.getProperty("user.dir") + "/data/TasksData.json",
+        return JsonReader.getJSONData("/data/TasksData.json",
                 "Tasks Data", 2);
     }
 
