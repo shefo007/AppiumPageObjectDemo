@@ -25,13 +25,11 @@ jobs:
       with:
         java-version: '20'
         distribution: 'oracle'
-    - run:
-          npm i -g appium@next
-          appium -v
-          appium &>/dev/null &
-
+    - uses: actions/setup-node@v3.7.0
+      with:
+        node-version: 'latest'
     - run: |
-            npm i -g appium@next
+            npm install -g appium@next
             appium -v
             appium &>/dev/null &
     - name: Run Appium Tests
