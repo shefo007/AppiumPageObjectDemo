@@ -25,9 +25,9 @@ jobs:
       with:
         java-version: '20'
         distribution: 'oracle'
-    - uses: actions/setup-node@v3.7.0
+    - uses: actions/setup-node@v3
       with:
-        node-version: 'latest'
+        node-version: '18'
     - run: |
             npm install -g appium@next
             appium -v
