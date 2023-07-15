@@ -23,7 +23,6 @@ public class BaseTestWorkflow {
 
         options.setPlatformName("Android");
         options.setPlatformVersion("11.0");
-        options.setAutomationName("UiAutomator2");
         options.setDeviceName("emulator-5554");
         options.setApp("/apps/ToDo.apk");
 
